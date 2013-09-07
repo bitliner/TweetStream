@@ -17,3 +17,10 @@ var t=new TwStream({
     }
 })
 ```
+## Notes
+
+This module adds to any tweet the specific keyword the tweet is been extracted by.
+For example, if the specified 'keywords' option is `['twitter api','twitter streaming']`, and the stream receives the tweet "Twitter has a streaming API", the module assign to the corresponding tweet the field 'extractedByKeyword' with 'twitter streaming' as value.
+
+In this way, more streams can be aggregated to a unique stream, avoiding to reach the Twitter api limit for stream api. 
+
