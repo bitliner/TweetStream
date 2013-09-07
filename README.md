@@ -24,7 +24,7 @@ This module adds to any tweet the specific keyword the tweet is been extracted b
 Imagine the following example:
 * the specified 'keywords' option is `['twitter api','twitter streaming']` 
 * the stream receives the tweet "Twitter has a streaming API"
-In this situation, the module assigns to the corresponding tweet the field 'extractedByKeyword' with 'twitter streaming' as value.
+In this situation, the module assigns to the corresponding tweet the field `'extractedByKeyword'` with `'twitter streaming'` as value.
 
 In this way, more streams can be aggregated to a unique stream, avoiding to reach the Twitter api limit for stream api. 
 
