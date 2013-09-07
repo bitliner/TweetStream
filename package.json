@@ -1,6 +1,6 @@
 {
   "name": "tweet_stream",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Create your Twitter stream (based on keywords) in a declarative way, for more simplicity. It uses statuses/filter Twitter endpoint.",
   "main": "index",
   "directories": {
@@ -19,8 +19,8 @@
     "twitter"
   ],
   "dependencies": {
-    "underscore":">=1.3.3",
-    "twit":">=1.0.12"
+    "underscore": ">=1.3.3",
+    "twit": "~1.1.9"
   },
   "author": "bitliner",
   "license": "BSD"
