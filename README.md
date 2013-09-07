@@ -2,6 +2,11 @@
 
 It lets you to create a keyword based Twitter stream.
 
+## Installation
+
+`npm install tweet_stream`
+
+
 ## Usage
 ```
 var TwStream=require('tweet_stream')
