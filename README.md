@@ -1,6 +1,12 @@
-# TweetStream
+# tweet_stream
 
 It lets you to create a keyword based Twitter stream.
+
+**Pros** of using  *tweet_stream*:
+
+1. integration with nodejs streams: you can create a twitter stream and pipe it to an other nodejs stream that makes some computations on each tweet (check the example)
+
+2. it enriches each tweet with the specific keyword it was extracted by. In this way you can easily aggregate multiple streams, avoiding to reach the Twitter api limit for stream api
 
 ## Installation
 
@@ -20,16 +26,8 @@ var t=new TwStream({
     callback: function(tweet){
         console.log('tweet',tweet)
     }
-})
+}).pipe(through2.obj(function(tweet, encoding, done) {
+    console.log('t', tweet.text);
+    done();
+}))
 ```
-## Notes
-
-This module adds to any tweet the specific keyword the tweet is been extracted by.
-
-Imagine the following example:
-* the specified 'keywords' option is `['twitter api','twitter streaming']` 
-* the stream receives the tweet "Twitter has a streaming API"
-In this situation, the module assigns to the corresponding tweet the field `'extractedByKeyword'` with `'twitter streaming'` as value.
-
-In this way, more streams can be aggregated to a unique stream, avoiding to reach the Twitter api limit for stream api. 
-
