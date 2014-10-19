@@ -15,17 +15,15 @@ It lets you to create a keyword based Twitter stream.
 
 ## Usage
 ```
-var TwStream=require('tweet_stream')
+var TwStream=require('tweet_stream'), 
+    through2=require('through2');
 
 var t=new TwStream({
     consumer_key:'xxx',
     consumer_secret:'yyy',
     access_token:'zzz',
     access_token_secret:'lll',
-    keywords: ['obama','election'],
-    callback: function(tweet){
-        console.log('tweet',tweet)
-    }
+    keywords: ['obama','election']
 }).pipe(through2.obj(function(tweet, encoding, done) {
     console.log('t', tweet.text);
     done();
