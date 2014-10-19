@@ -1,6 +1,6 @@
 {
   "name": "tweet_stream",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Create your Twitter stream (based on keywords) in a declarative way, for more simplicity. It uses statuses/filter Twitter endpoint.",
   "main": "index",
   "directories": {
